@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  blockquote {
+    @apply ml-4;
+    @apply mr-4;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+  }
+
+  pre {
+    @apply my-4;
+  }
+
+  /* jodit */
+
+  .jodit-wysiwyg>ol,
+  ul {
+    margin: inherit;
+    padding-left: 2.5rem;
+  }
+
+  @font-face {
+    font-family: 'Kalimati';
+    src: url('./assets/fonts/Kalimati/Kalimati.eot');
+    src: url('./assets/fonts/Kalimati/Kalimati.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Kalimati/Kalimati.woff2') format('woff2'),
+      url('./assets/fonts/Kalimati/Kalimati.woff') format('woff'),
+      url('./assets/fonts/Kalimati/Kalimati.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+}
+
+@layer utilities {
+  .scrollbars {
+    overflow: auto;
+  }
+
+  .scrollbars::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  .scrollbars::-webkit-scrollbar-track {
+    background: #d2d2d6;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  .scrollbars::-webkit-scrollbar-thumb {
+    background: #70a9ff;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  .scrollbars::-webkit-scrollbar-thumb:hover {
+    background: #70a9ff;
+    cursor: pointer;
+  }
+}
+
+:root {
+  --primary-color: #2159ab;
+}
+
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1400px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+/* swiper for external login */
+.swiper-pagination-bullet {
+  height: 0.75rem !important;
+  width: 0.75rem !important;
+  background-color: #fafafa !important;
+  border: 1px solid #292929;
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+  margin-right: 0.5rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+}
+
+/* login */
+.bg-login {
+  background-image: url('assets/img/bg-login.png');
+}
+
+/* tree */
+
+.list-nested {
+  /* margin-left: 0.5rem; */
+}
+
+.list-nested>div {
+  /* margin-left: 0.5rem; */
+  position: relative;
+}
+
+.list-nested>div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 1.5rem);
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+.list-nested>.side-border:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: transparent;
+}
+
+.parent .side-border:before {
+  display: none;
+}
+
+/* .list-nested > .side-parent:before {
+  content: '';
+
+  border-top: 1px solid transparent;
+} */
+/* .list-nested > div:last-child:after {
+  display: none;
+} */
+
+.list-nested>.side-border:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  border-top: 1px solid #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: -1.25rem;
+}
+
+/* .list-nested > .no-border:before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  border-top: 1px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+} */
